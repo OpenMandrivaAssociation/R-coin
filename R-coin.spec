@@ -22,6 +22,8 @@ BuildRequires:    R-xtable R-e1071 R-vcd
 %else
 BuildRequires:    R-multcomp R-xtable R-e1071 R-vcd 
 %endif
+BuildRequires:    blas-devel
+BuildRequires:    lapack-devel
 
 %description
 Conditional inference procedures for the general independence problem

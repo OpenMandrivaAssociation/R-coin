@@ -1,26 +1,24 @@
-%bcond_without bootstrap
+%bcond_with bootstrap
 %global packname  coin
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
 Version:          1.0_20
-Release:          1
+Release:          2
 Summary:          Conditional Inference Procedures in a Permutation Test Framework
 Group:            Sciences/Mathematics
 License:          GPL-2
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.0-20.tar.gz
-Requires:         R-methods R-survival R-mvtnorm R-modeltools 
-%if %{with bootstrap}
-Requires:         R-xtable R-e1071 R-vcd 
-%else
-Requires:         R-multcomp R-xtable R-e1071 R-vcd 
+Requires:         R-methods R-survival R-mvtnorm R-modeltools R-xtable
+Requires:         R-e1071 R-vcd
+%if %{without bootstrap}
+Requires:         R-multcomp
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-methods R-survival R-mvtnorm R-modeltools
-%if %{with bootstrap}
-BuildRequires:    R-xtable R-e1071 R-vcd 
-%else
-BuildRequires:    R-multcomp R-xtable R-e1071 R-vcd 
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-methods
+BuildRequires:    R-survival R-mvtnorm R-modeltools R-xtable R-e1071 R-vcd
+%if %{without bootstrap}
+BuildRequires:    R-multcomp
 %endif
 BuildRequires:    blas-devel
 BuildRequires:    lapack-devel

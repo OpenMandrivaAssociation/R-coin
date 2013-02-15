@@ -3,13 +3,13 @@
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
-Version:          1.0_20
-Release:          2
+Version:          1.0.21
+Release:          1
 Summary:          Conditional Inference Procedures in a Permutation Test Framework
 Group:            Sciences/Mathematics
 License:          GPL-2
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.0-20.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/coin_1.0-21.tar.gz
 Requires:         R-methods R-survival R-mvtnorm R-modeltools R-xtable
 Requires:         R-e1071 R-vcd
 %if %{without bootstrap}
@@ -47,7 +47,6 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %files
 %dir %{rlibdir}/%{packname}
 %doc %{rlibdir}/%{packname}/doc
-%doc %{rlibdir}/%{packname}/documentation
 %doc %{rlibdir}/%{packname}/html
 %doc %{rlibdir}/%{packname}/CITATION
 %doc %{rlibdir}/%{packname}/DESCRIPTION

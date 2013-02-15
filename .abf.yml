@@ -1,2 +1,4 @@
+removed_sources:
+  coin_1.0-20.tar.gz: 6e2fb8edbff31598981eb8690940dbdc82a1dc1d
 sources:
-  "coin_1.0-20.tar.gz:"	6e2fb8edbff31598981eb8690940dbdc82a1dc1d
+  coin_1.0-21.tar.gz: 94e634c6762e58b4bd3de52fc048d478f67ad44c

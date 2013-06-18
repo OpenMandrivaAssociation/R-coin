@@ -4,7 +4,7 @@
 
 Name:             R-%{packname}
 Version:          1.0.21
-Release:          1
+Release:          2
 Summary:          Conditional Inference Procedures in a Permutation Test Framework
 Group:            Sciences/Mathematics
 License:          GPL-2
